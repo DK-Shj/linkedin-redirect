@@ -10,7 +10,7 @@
 
         // Redirect to your app with the authorization code
         if (code && state) {
-            window.location.href = `whisper://`;
+            window.location.href = `whisper://oauth?code=${code}&state=${state}`;
         } else {
             console.error('Authorization code or state not found in URL');
         }
